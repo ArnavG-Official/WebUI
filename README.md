@@ -359,7 +359,3 @@ webui/
 ```
 
 ---
-
-# License
-
-MIT License
