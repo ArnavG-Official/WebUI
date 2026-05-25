@@ -1,17 +1,20 @@
 [project]
-name = "WebUI"
+name = "ArnavG-Official"
 version = "1.0"
 description = "A Python library for creating webpages with HTML, CSS, and JavaScript using Python syntax."
 authors = [
-  { name = "WebUI" }
+  { name = "ArnavG-Official", email = "arnavg2026@gmail.com" }
 ]
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = []
 
-[project.urls]
-Home = "https://example.com"
+license = "MIT"
+license-files = ["LICEN[CS]E*"]
 
 [build-system]
 requires = ["setuptools>=61.0", "wheel"]
 build-backend = "setuptools.build_meta"
+
+[project.urls]
+Homepage = "https://github.com/ArnavG-Official/WebUI"
