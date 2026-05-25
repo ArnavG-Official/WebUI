@@ -1,0 +1,17 @@
+[project]
+name = "WebUI"
+version = "1.0"
+description = "A Python library for creating webpages with HTML, CSS, and JavaScript using Python syntax."
+authors = [
+  { name = "WebUI" }
+]
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.urls]
+Home = "https://example.com"
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
