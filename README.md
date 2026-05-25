@@ -3,31 +3,20 @@
 
 Build websites using pure Python. WebUI is a Python library that lets developers create HTML, CSS, and JavaScript using clean Python syntax.
 
-Instead of writing:
-
-```html
-<h1>Hello</h1>
-```
-
-you write:
-
-```python
-webui.html.h1("Hello")
-```
-
 ---
 
 # Features
 
-- HTML using Python
-- CSS using Python
+- HTML with Tag helper support using Python
+- CSS with Property helper support using Python
 - JavaScript using Python
+- Full DOM event helper support
 - Automatic HTML rendering
 - Component-based architecture
 - Clean syntax
 - Localhost web server
-- Reactive UI system (planned)
-- Hot reload (planned)
+- Reactive UI system
+- Hot reload
 
 ---
 
@@ -82,6 +71,9 @@ WebUI is separated into 3 modules:
 ---
 
 # HTML API
+
+WebUI now supports all HTML5 tags via `webui.html.<tag>()`.
+The examples below show common tag categories.
 
 ## Text
 
@@ -160,12 +152,14 @@ webui.html.th()
 
 # CSS API
 
+WebUI supports all CSS properties through helper functions like `webui.css.<property_name>()` and the generic `webui.css.style(...)` helper.
+
 ## Colors
 
 ```python
-webui.css.color()
-webui.css.background()
-webui.css.opacity()
+webui.css.color("red")
+webui.css.background("#f0f0f0")
+webui.css.opacity("0.8")
 ```
 
 ---
@@ -173,10 +167,10 @@ webui.css.opacity()
 ## Typography
 
 ```python
-webui.css.font_size()
-webui.css.font_weight()
-webui.css.font_family()
-webui.css.text_align()
+webui.css.font_size("16px")
+webui.css.font_weight("bold")
+webui.css.font_family("Arial, sans-serif")
+webui.css.text_align("center")
 ```
 
 ---
@@ -184,9 +178,9 @@ webui.css.text_align()
 ## Spacing
 
 ```python
-webui.css.margin()
-webui.css.padding()
-webui.css.gap()
+webui.css.margin("16px")
+webui.css.padding("12px")
+webui.css.gap("8px")
 ```
 
 ---
@@ -194,64 +188,45 @@ webui.css.gap()
 ## Layout
 
 ```python
-webui.css.flex()
-webui.css.grid()
-webui.css.display()
+webui.css.display("grid")
+webui.css.flex("1")
+webui.css.grid("1fr 1fr")
 ```
 
 ---
 
-## Borders
+## Dynamic Properties
 
 ```python
-webui.css.border()
-webui.css.border_radius()
-webui.css.shadow()
-```
-
----
-
-## Animation
-
-```python
-webui.css.transition()
-webui.css.transform()
-webui.css.animate()
+webui.css.background_color("red")
+webui.css._webkit_transform("rotate(45deg)")
+webui.css.style(border_top="1px solid black", padding="4px")
 ```
 
 ---
 
 # JavaScript API
 
+WebUI supports all DOM event helpers via `webui.js.on<event>()`.
+
 ## Events
 
 ```python
-webui.js.onclick()
-webui.js.onhover()
-webui.js.onchange()
-webui.js.onsubmit()
+webui.js.onclick("alert('clicked')")
+webui.js.oninput("console.log('input changed')")
+webui.js.onsearch("console.log('search')")
+webui.js.onsubmit("alert('submitted')")
 ```
 
 ---
 
-## Browser Actions
+## Utilities
 
 ```python
-webui.js.alert()
-webui.js.prompt()
-webui.js.confirm()
-webui.js.redirect()
-```
-
----
-
-## DOM Functions
-
-```python
-webui.js.hide()
-webui.js.show()
-webui.js.toggle()
-webui.js.set_html()
+webui.js.alert("Hello")
+webui.js.console_log("Message")
+webui.js.raw("console.log('raw JS')")
+webui.js.event("onclick", "alert('hi')")
 ```
 
 ---
@@ -333,29 +308,8 @@ and launches a localhost server.
 
 ---
 
-# Example Project Structure
+# Program Output
 
-```text
-myproject/
-│
-├── app.py
-├── index.html
-└── assets/
-```
-
----
-
-# Example Architecture
-
-```text
-webui/
-│
-├── html/
-├── css/
-├── js/
-├── renderer.py
-├── server.py
-└── state.py
-```
+Any Python program created from this library will have a HTML output. The first time you excecute your Python file will run the server and luanch the HTML page. If you want to stop your running server just execute your Python file again.
 
 ---
