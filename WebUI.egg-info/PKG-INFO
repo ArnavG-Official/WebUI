@@ -1,3 +1,15 @@
+Metadata-Version: 2.4
+Name: WebUI
+Version: 1.0
+Summary: A Python library for creating webpages with HTML, CSS, and JavaScript using Python syntax.
+Author-email: ArnavG-Official <arnavg2026@gmail.com>
+License-Expression: MIT
+Project-URL: Homepage, https://github.com/ArnavG-Official/WebUI
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: license-file
+
 # WebUI
 > A Python Library for creating webpages.
 
