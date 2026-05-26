@@ -282,32 +282,6 @@ webui.run(page)
 
 ---
 
-# Output HTML
-
-WebUI automatically generates:
-
-- HTML
-- CSS
-- JavaScript
-
-and launches a localhost server.
-
----
-
-# Planned Features
-
-- Components
-- State management
-- Virtual DOM
-- Routing
-- Tailwind support
-- Hot reload
-- WebSocket support
-- Async rendering
-- Theme engine
-
----
-
 # Program Output
 
 Any Python program created from this library will have a HTML output. The first time you excecute your Python file will run the server and luanch the HTML page. If you want to stop your running server just execute your Python file again.
