@@ -5,7 +5,7 @@ Build websites using pure Python. WebUI is a Python library that lets developers
 
 ---
 
-# Features
+## Features
 
 - HTML with Tag helper support using Python
 - CSS with Property helper support using Python
@@ -20,15 +20,15 @@ Build websites using pure Python. WebUI is a Python library that lets developers
 
 ---
 
-# Installation
+## Installation
 
 ```bash
-pip install webui
+pip install webui=1.0
 ```
 
 ---
 
-# Quick Example
+## Quick Example
 
 ```python
 import webui
@@ -58,7 +58,7 @@ webui.run(page)
 
 ---
 
-# Syntax Structure
+## Syntax Structure
 
 WebUI is separated into 3 modules:
 
@@ -70,12 +70,12 @@ WebUI is separated into 3 modules:
 
 ---
 
-# HTML API
+## HTML API
 
 WebUI now supports all HTML5 tags via `webui.html.<tag>()`.
 The examples below show common tag categories.
 
-## Text
+### Text
 
 ```python
 webui.html.p()
@@ -89,7 +89,7 @@ webui.html.pre()
 
 ---
 
-## Headings
+### Headings
 
 ```python
 webui.html.h1()
@@ -102,7 +102,7 @@ webui.html.h6()
 
 ---
 
-## Layout
+### Layout
 
 ```python
 webui.html.div()
@@ -116,7 +116,7 @@ webui.html.nav()
 
 ---
 
-## Forms
+### Forms
 
 ```python
 webui.html.form()
@@ -129,7 +129,7 @@ webui.html.option()
 
 ---
 
-## Lists
+### Lists
 
 ```python
 webui.html.ul()
@@ -139,7 +139,7 @@ webui.html.li()
 
 ---
 
-## Tables
+### Tables
 
 ```python
 webui.html.table()
@@ -150,11 +150,11 @@ webui.html.th()
 
 ---
 
-# CSS API
+## CSS API
 
 WebUI supports all CSS properties through helper functions like `webui.css.<property_name>()` and the generic `webui.css.style(...)` helper.
 
-## Colors
+### Colors
 
 ```python
 webui.css.color("red")
@@ -164,7 +164,7 @@ webui.css.opacity("0.8")
 
 ---
 
-## Typography
+### Typography
 
 ```python
 webui.css.font_size("16px")
@@ -175,7 +175,7 @@ webui.css.text_align("center")
 
 ---
 
-## Spacing
+### Spacing
 
 ```python
 webui.css.margin("16px")
@@ -185,7 +185,7 @@ webui.css.gap("8px")
 
 ---
 
-## Layout
+### Layout
 
 ```python
 webui.css.display("grid")
@@ -195,7 +195,7 @@ webui.css.grid("1fr 1fr")
 
 ---
 
-## Dynamic Properties
+### Dynamic Properties
 
 ```python
 webui.css.background_color("red")
@@ -205,11 +205,11 @@ webui.css.style(border_top="1px solid black", padding="4px")
 
 ---
 
-# JavaScript API
+## JavaScript API
 
 WebUI supports all DOM event helpers via `webui.js.on<event>()`.
 
-## Events
+### Events
 
 ```python
 webui.js.onclick("alert('clicked')")
@@ -220,7 +220,7 @@ webui.js.onsubmit("alert('submitted')")
 
 ---
 
-## Utilities
+### Utilities
 
 ```python
 webui.js.alert("Hello")
@@ -231,7 +231,7 @@ webui.js.event("onclick", "alert('hi')")
 
 ---
 
-# Styling Example
+## Styling Example
 
 ```python
 import webui
@@ -255,7 +255,7 @@ webui.run(page)
 
 ---
 
-# Button Example
+## Button Example
 
 ```python
 import webui
@@ -282,7 +282,7 @@ webui.run(page)
 
 ---
 
-# Program Output
+## Program Output
 
 Any Python program created from this library will have a HTML output. The first time you excecute your Python file will run the server and luanch the HTML page. If you want to stop your running server just execute your Python file again.
 
